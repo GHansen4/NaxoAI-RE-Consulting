@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+  
+  /* Improved focus styles for accessibility */
+  *:focus {
+    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  }
+  
+  /* Skip to content link for accessibility */
+  .skip-link {
+    @apply absolute -top-40 left-6 bg-primary-600 text-white px-4 py-2 rounded-md z-50 focus:top-6 transition-all duration-200;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-900 hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px];
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px];
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  
+  .section-spacing {
+    @apply py-6 sm:py-8 lg:py-10 xl:py-12;
+  }
+  
+  .section-spacing-large {
+    @apply py-10 sm:py-12 lg:py-16 xl:py-20;
+  }
+  
+  /* Core animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  /* Z-index hierarchy - ensure proper stacking order */
+  .z-modal {
+    z-index: 999999;
+  }
+  
+/* Enhanced focus states for accessibility */
+.focus-visible\:ring-2:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--tw-ring-color);
+}
+
+/* Ensure all interactive elements have visible focus states */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.btn-primary:focus-visible {
+  ring: 2px solid #60a5fa;
+  ring-offset: 2px;
+}
+
+.btn-secondary:focus-visible {
+  ring: 2px solid #60a5fa;
+  ring-offset: 2px;
+}
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in-up,
+    .hover-lift,
+    .transition-all {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* Calendly badge widget visibility control */
+  .calendly-badge-widget {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  .calendly-badge-widget.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Respect reduced motion preferences for badge */
+  @media (prefers-reduced-motion: reduce) {
+    .calendly-badge-widget {
+      transition: none !important;
+    }
+  }
+
+  
+  /* Professional typography hierarchy */
+  h1, .h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900;
+  }
+
+  h2, .h2 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-bold leading-tight text-slate-900;
+  }
+
+  h3, .h3 {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold leading-tight text-slate-900;
+  }
+
+  .body-text {
+    @apply text-base sm:text-lg leading-relaxed text-slate-600;
+  }
+
+  .small-text {
+    @apply text-sm font-medium text-slate-600;
+  }
+
+  /* Neutral chip/badge style */
+  .neutral-chip {
+    @apply inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600 border border-slate-200;
+  }
+
+  /* Responsive typography helpers */
+  .responsive-text-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+  
+  .responsive-text-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+  
+  .responsive-text-3xl {
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl;
+  }
+}
