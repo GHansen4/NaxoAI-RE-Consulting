@@ -30,6 +30,18 @@ const faqs = [
   {
     question: "What if I don't know where to start?",
     answer: "Bring your biggest time drain. We'll find a quick win."
+  },
+  {
+    question: "Do you offer a paid diagnostic?",
+    answer: "Yes—$149 for a 60-minute audit with a 1-page action plan. If you move forward with implementation within 14 days, the fee is credited."
+  },
+  {
+    question: "How do you handle Fair Housing compliance?",
+    answer: "We use non-discriminatory templates and avoid prohibited terms. You have final review; we can adapt copy to your brokerage guidelines."
+  },
+  {
+    question: "What's your no-show policy?",
+    answer: "Free consults: one reschedule allowed. Paid diagnostics: refundable if canceled 24 hours before; otherwise credited toward future work."
   }
 ]
 

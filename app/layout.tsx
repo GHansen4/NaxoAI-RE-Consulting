@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'NaxoAI - AI Consulting for Real Estate Agents',
-  description: 'AI consulting for real estate agents. Your first call is free. Save 5+ hours per week with tailored, no-code AI solutions that streamline your workflow.',
+  description: 'AI consulting for real estate agents. Paid Diagnostic & Action Plan, follow-up automations, listing copy automation, no-code setup. Your first call is free. Save many hours each week with tailored AI solutions that streamline your workflow.',
   keywords: ['AI consulting', 'real estate agents', 'automation', 'MLS descriptions', 'lead generation', 'Raleigh'],
   authors: [{ name: 'Greg Hansen', url: 'https://naxoai.com' }],
   creator: 'NaxoAI',
@@ -73,6 +73,14 @@ export default function RootLayout({
         
         {/* Preconnect to Calendly for faster loading */}
         <link rel="preconnect" href="https://assets.calendly.com" />
+        
+        {/* Preload hero image for better LCP */}
+        <link
+          rel="preload"
+          href="/images/NaxoHeroImage.png"
+          as="image"
+          type="image/png"
+        />
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -129,7 +137,7 @@ export default function RootLayout({
         
         {/* Calendly badge widget begin */}
         <script type="text/javascript" dangerouslySetInnerHTML={{
-          __html: `window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/g-hansen17/30min', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }`
+          __html: `window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/g-hansen17/30min', text: 'Schedule a call', color: '#0069ff', textColor: '#ffffff', branding: true }); }`
         }} />
         {/* Calendly badge widget end */}
       </head>

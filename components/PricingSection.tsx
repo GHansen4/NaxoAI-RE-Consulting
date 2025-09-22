@@ -69,19 +69,30 @@ export default function PricingSection() {
                     <div className="text-sm text-gray-500">for setup, training & support</div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mt-3 italic">
-                  Most clients see a tangible time-saver after the first session.
-                </p>
               </div>
               
               {/* Features list */}
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4 mb-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckIcon className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">{feature}</span>
                   </div>
                 ))}
+              </div>
+              
+              {/* What you'll walk away with */}
+              <div className="mb-8">
+                <h4 className="mt-6 font-semibold text-gray-900">What you'll walk away with</h4>
+                <ul className="mt-2 space-y-1 text-sm text-gray-700">
+                  <li>• A simple action plan you can reference</li>
+                  <li>• Templates & checklists for common tasks</li>
+                  <li>• Short Loom walkthrough for your setup</li>
+                  <li>• 14-day support window for small tweaks</li>
+                </ul>
+                <p className="mt-3 text-xs text-gray-500">
+                  Most clients see a tangible time-saver after the first session.
+                </p>
               </div>
               
               {/* What's included */}

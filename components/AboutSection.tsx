@@ -1,6 +1,7 @@
 "use client"
 
 import React from 'react'
+import Image from 'next/image'
 import { CheckBadgeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline'
 import AnimatedSection from './AnimatedSection'
 import ShowMore from './ui/ShowMore'
@@ -42,29 +43,36 @@ export default function AboutSection() {
             Hi, I&apos;m Greg.
           </h2>
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Real estate professional turned AI consultant, helping agents like you work smarter, not harder.
+            Real estate investor turned AI consultant, helping agents like you work smarter, not harder.
           </p>
         </AnimatedSection>
         
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* Photo placeholder */}
-              <div className="relative h-64 lg:h-auto bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
-                    <svg className="w-16 h-16 text-gray-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-gray-600 font-medium">Professional Headshot</p>
-                  <p className="text-xs text-gray-500">Coming Soon</p>
+              {/* Profile Image */}
+              <div className="relative bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-6 lg:p-8 min-h-[320px] lg:min-h-[400px]">
+                <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
+                  <Image
+                    src="/images/aboutMePic.jpg"
+                    alt="Greg Hansen, Founder of NaxoAI - AI Consultant specializing in real estate automation"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 1024px) 100vw, 400px"
+                    priority={false}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                  />
+                  
+                  {/* Decorative overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-slate-900/5 pointer-events-none" />
                 </div>
                 
-                {/* Decorative elements */}
-                <div className="absolute top-4 left-4 w-8 h-8 bg-white/20 rounded-full blur-sm"></div>
-                <div className="absolute bottom-8 right-8 w-12 h-12 bg-white/30 rounded-full blur-md"></div>
-                <div className="absolute top-1/2 right-4 w-6 h-6 bg-white/25 rounded-full blur-sm"></div>
+                {/* Decorative background elements */}
+                <div className="absolute top-4 left-4 w-8 h-8 bg-white/20 rounded-full blur-sm" />
+                <div className="absolute bottom-8 right-8 w-12 h-12 bg-white/30 rounded-full blur-md" />
+                <div className="absolute top-1/2 right-4 w-6 h-6 bg-white/25 rounded-full blur-sm" />
               </div>
               
               {/* Content */}
