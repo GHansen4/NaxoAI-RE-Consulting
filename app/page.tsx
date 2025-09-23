@@ -3,7 +3,6 @@
 import Navigation from '@/components/Navigation'
 import HeroSection from '@/components/HeroSection'
 import OutcomesSection from '@/components/OutcomesSection'
-import ProcessStrip from '@/components/ProcessStrip'
 import AboutSection from '@/components/AboutSection'
 import PricingSection from '@/components/PricingSection'
 import FAQSection from '@/components/FAQSection'
@@ -20,7 +19,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <OutcomesSection />
-      <ProcessStrip />
       <AboutSection />
       <PricingSection />
       <FAQSection />

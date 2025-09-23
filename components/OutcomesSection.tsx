@@ -16,32 +16,32 @@ interface OutcomeCard {
 const outcomeData: OutcomeCard[] = [
   {
     icon: Clock,
-    title: "Save significant time each week",
-    subtitle: "Automate admin so you can focus on clients.",
-    proofChip: "Significant time savings",
+    title: "Win back 5+ hours every week",
+    subtitle: "Stop drowning in admin. Let AI handle the busywork so you can focus on clients.",
+    proofChip: "Time savings",
     bullets: [
       "MLS-ready listing descriptions in minutes",
-      "Call notes → CRM summaries you can paste"
+      "Call notes → CRM summaries auto-filled"
     ]
   },
   {
     icon: NotificationBell,
-    title: "Never miss a hot lead",
-    subtitle: "Instant follow-ups and lead routing, even after hours.",
-    proofChip: "+30–50% replies",
+    title: "Follow up—before your competition does",
+    subtitle: "Agents using AI see 30–50% higher reply rates.",
+    proofChip: "Higher reply rates",
     bullets: [
-      "Same-day follow-ups after open houses",
-      "Professional sequences for new inquiries"
+      "Instant responses, even after hours",
+      "Professional sequences for every new inquiry"
     ]
   },
   {
     icon: BadgeStar,
-    title: "Look professional, everywhere",
-    subtitle: "Consistent, on-brand content across channels.",
+    title: "Stand out with polished, on-brand content",
+    subtitle: "Launch AI-powered marketing in just days.",
     proofChip: "Launch in days",
     bullets: [
-      "Listing captions & variations in one click",
-      "Consistent tone across channels"
+      "One-click listing captions & variations",
+      "Consistent tone across every channel"
     ]
   }
 ]
@@ -52,10 +52,10 @@ export default function OutcomesSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimatedSection className="text-center mb-6 sm:mb-8">
           <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
-            Real results agents care about.
+            Turn AI into your unfair advantage.
           </h2>
           <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Shorten the busywork and focus on clients. Here&apos;s what you&apos;ll notice first.
+            Free up hours, never miss a lead, and wow clients—starting this week.
           </p>
         </AnimatedSection>
 
@@ -99,6 +99,9 @@ export default function OutcomesSection() {
         {/* Footer content */}
         <div className="text-center space-y-4">
           <p className="text-sm text-slate-600">
+            See exactly how many hours AI can save you this month.
+          </p>
+          <p className="text-xs text-slate-500">
             All with proven, tools we set up for you.
           </p>
           

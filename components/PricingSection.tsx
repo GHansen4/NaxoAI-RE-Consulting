@@ -1,119 +1,121 @@
-'use client'
+import Link from "next/link";
 
-import { IconChip, DocCheck, WrenchKit, ShieldCheck } from '@/components/ui/Icons'
-import AnimatedSection from './AnimatedSection'
-import CalendlyButton from './CalendlyButton'
+const packages = [
+  {
+    name: "Starter – AI Assistant",
+    price: "From $249/mo",
+    blurb:
+      "Win back 5–8 hours a week and turn more site visitors into leads—without adding to your workload.",
+    cta: { label: "Get started", href: "/book" },
+    features: [
+      "Never miss a website lead again — how: AI chatbot answers FAQs and captures contact info 24/7",
+      "Write listings, emails, and replies 3× faster — how: pre-built, on-brand AI templates",
+      "Show up on social even when you're busy — how: weekly caption ideas delivered to your inbox",
+      "Reduce admin back-and-forth — how: quick automations for common inquiries",
+      "Stay focused on clients — how: we maintain and troubleshoot everything for you",
+    ],
+    badge: "Best for solo agents",
+    roiNote: "One extra closing often covers a year.",
+  },
+  {
+    name: "Growth – AI Marketing Engine",
+    price: "Most agents invest ~$599/mo",
+    blurb:
+      "Keep a consistent presence online and talk only to qualified prospects while routine marketing runs itself.",
+    cta: { label: "Scale my marketing", href: "/book" },
+    features: [
+      "Post consistently without manual effort — how: automated content calendar + scheduling",
+      "Publish MLS-ready listings in minutes — how: low-code workflow from notes/photos",
+      "Talk to warmer leads, not tire-kickers — how: chatbot pre-qualifies buyers/sellers",
+      "Know what's working at a glance — how: monthly performance summary delivered to you",
+      "Avoid tool fatigue — how: we run and update the stack end-to-end",
+      "Includes everything in Starter",
+    ],
+    highlight: true,
+    badge: "Most popular",
+    roiNote: "One extra closing often covers a year.",
+  },
+  {
+    name: "Pro – AI Team in a Box",
+    price: "From $999/mo",
+    blurb:
+      "Operate like you have a full admin + marketing team: instant follow-ups, ready-to-launch listings, and scheduling across channels.",
+    cta: { label: "Run it for me", href: "/book" },
+    features: [
+      "Follow up instantly after every showing — how: personalized email & text sequences",
+      "Launch a complete listing package same day — how: MLS copy, social posts, handouts, video script",
+      "Be available 24/7 without being online — how: web, FB Messenger & SMS chatbot with scheduling",
+      "Get proactive optimization, not just maintenance — how: quarterly strategy review",
+      "Spend your time on clients and negotiations — how: we handle the ops behind the scenes",
+      "Includes everything in Growth",
+    ],
+    badge: "For top producers",
+    roiNote: "One extra closing often covers a year.",
+  },
+];
+
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="scroll-mt-28 md:scroll-mt-32 section-spacing-large bg-white">
+    <section id="pricing" className="scroll-mt-28 md:scroll-mt-32 section-spacing-large bg-white" aria-labelledby="pricing-heading">
       <div className="mx-auto max-w-7xl container-padding">
-        <AnimatedSection className="text-center mb-6 sm:mb-8">
-          <h2 className="responsive-text-2xl font-bold tracking-tight text-gray-900">
+        {/* Heading */}
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 id="pricing-heading" className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
             Simple, transparent pricing.
           </h2>
-          <p className="mt-3 sm:mt-4 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-gray-600">
             No surprise fees, no long-term contracts. Just honest pricing for real results.
           </p>
-        </AnimatedSection>
-        
-        <div className="max-w-2xl mx-auto">
-          {/* Subtle section panel */}
-          <div className="bg-slate-50/60 rounded-3xl p-4 md:p-6">
-            {/* Main pricing card */}
-            <aside className="rounded-2xl border border-gray-100 bg-white shadow-md p-6 sm:p-8">
-            {/* 1. Plan + Price */}
-            <div className="text-center mb-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Pay-as-you-go consulting
-              </h3>
-              <div className="text-3xl md:text-4xl font-bold text-slate-900 mb-1">
-                $199/hour
-              </div>
-              <p className="text-sm text-gray-500">
-                First consultation is free
+        </div>
+
+        {/* Packages */}
+        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {packages.map((p) => (
+            <div
+              key={p.name}
+              className={`relative flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm ${
+                p.highlight ? "ring-2 ring-blue-600" : ""
+              }`}
+            >
+              {p.badge && (
+                <span className="absolute -top-3 left-6 inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
+                  {p.badge}
+                </span>
+              )}
+              <h3 className="text-xl font-semibold text-gray-900">{p.name}</h3>
+              <p className="mt-1 text-sm text-gray-600">{p.blurb}</p>
+              <p className="mt-4 text-2xl font-semibold text-gray-900">{p.price}</p>
+              <p className="mt-1 text-xs text-gray-600">
+                One extra closing per year easily covers your investment.
               </p>
-            </div>
-
-            {/* 2. Key Benefits */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center space-x-3">
-                <IconChip><DocCheck className="h-6 w-6" /></IconChip>
-                <span className="text-gray-700">Actionable AI plan customized to your business</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <IconChip><WrenchKit className="h-6 w-6" /></IconChip>
-                <span className="text-gray-700">Hands-on setup & support</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <IconChip><ShieldCheck className="h-6 w-6" /></IconChip>
-                <span className="text-gray-700">No contracts, no hidden fees</span>
-              </div>
-            </div>
-
-            {/* 3. What's included */}
-            <div className="mb-8">
-              <h4 className="font-semibold text-gray-900 mb-4">What&apos;s included</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-600">
-                <div className="flex items-start">
-                  <span className="inline-block w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>1:1 consultation call</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="inline-block w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>Personalized workflows</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="inline-block w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>Tools & integrations setup</span>
-                </div>
-                <div className="flex items-start">
-                  <span className="inline-block w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>Call notes → CRM summaries</span>
-                </div>
-                <div className="flex items-start md:col-span-2">
-                  <span className="inline-block w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  <span>Ongoing recommendations</span>
-                </div>
+              <ul className="mt-4 space-y-2 text-sm text-gray-700">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-start gap-2">
+                    <svg className="mt-1 h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.704 5.29a1 1 0 0 1 .006 1.414l-7.2 7.25a1 1 0 0 1-1.43.006L3.29 9.96a1 1 0 1 1 1.42-1.41l3.01 3.02 6.49-6.54a1 1 0 0 1 1.494.26z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <Link
+                  href={p.cta.href}
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  {p.cta.label}
+                </Link>
               </div>
             </div>
-
-            {/* CTA Button */}
-            <div className="text-center">
-                    <CalendlyButton className="inline-flex items-center justify-center bg-accent-600 text-white rounded-xl shadow-sm hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 px-6 py-3 text-sm font-medium transition-colors duration-200">
-                Schedule your free consultation
-              </CalendlyButton>
-            </div>
-          </aside>
-          </div>
+          ))}
         </div>
-        
-        {/* Additional trust elements */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center space-x-6 text-sm text-gray-500">
-            <div className="flex items-center space-x-2">
-              <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-              <span>No contracts</span>
-            </div>
-            <div className="w-px h-4 bg-gray-300"></div>
-            <div className="flex items-center space-x-2">
-              <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-              <span>No hidden fees</span>
-            </div>
-            <div className="w-px h-4 bg-gray-300"></div>
-            <div className="flex items-center space-x-2">
-              <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 12l2 2 4-4"/>
-              </svg>
-              <span>Technical setup included</span>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
-  )
+  );
 }
