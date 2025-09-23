@@ -157,7 +157,7 @@ export default function AIHelpsSection() {
           </div>
           
           <h2 className="responsive-text-2xl font-bold tracking-tight text-gray-900">
-            Practical, no-code AI for real estate.
+            Professional AI solutions for real estate.
           </h2>
           <p className="mt-3 sm:mt-4 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
             Streamline your workflow, enhance client experience, and close more deals with tailored AI solutions.
@@ -200,10 +200,10 @@ export default function AIHelpsSection() {
         {/* Proof point and footnote */}
         <div className="text-center mt-8">
           <p className="text-sm text-gray-600 mb-2">
-            <span className="font-medium text-gray-900">Example:</span> MLS copy drafted in ~2 minutes instead of 45.
+            <span className="font-medium text-gray-900">Example:</span> MLS copy drafted quickly instead of taking much longer.
           </p>
           <p className="text-xs text-gray-500">
-            All with proven, out-of-the-box tools—no coding required.
+            All with proven, enterprise-grade tools—technical setup handled.
           </p>
         </div>
         

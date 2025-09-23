@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'NaxoAI - AI Consulting for Real Estate Agents',
-  description: 'AI consulting for real estate agents. Paid Diagnostic & Action Plan, follow-up automations, listing copy automation, no-code setup. Your first call is free. Save many hours each week with tailored AI solutions that streamline your workflow.',
+  description: 'AI consulting for real estate agents. Paid Diagnostic & Action Plan, follow-up automations, listing copy automation, technical setup. Your first call is free. Save significant time each week with tailored AI solutions that streamline your workflow.',
   keywords: ['AI consulting', 'real estate agents', 'automation', 'MLS descriptions', 'lead generation', 'Raleigh'],
   authors: [{ name: 'Greg Hansen', url: 'https://naxoai.com' }],
   creator: 'NaxoAI',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'NaxoAI - AI Consulting for Real Estate Agents',
-    description: 'Save 5+ hours per week with AI automation. Free consultation for real estate agents in Raleigh and nationwide.',
+    description: 'Save significant time each week with AI automation. Free consultation for real estate agents in Raleigh and nationwide.',
     url: 'https://naxoai.com',
     siteName: 'NaxoAI',
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NaxoAI - AI Consulting for Real Estate Agents',
-    description: 'Save 5+ hours per week with AI automation. Free consultation for real estate agents.',
+    description: 'Save significant time each week with AI automation. Free consultation for real estate agents.',
     images: ['https://naxoai.com/og-image.jpg'],
     creator: '@naxoai',
   },
@@ -80,6 +80,7 @@ export default function RootLayout({
           href="/images/NaxoHeroImage.png"
           as="image"
           type="image/png"
+          fetchPriority="high"
         />
         <link
           rel="preload"
@@ -132,14 +133,8 @@ export default function RootLayout({
         
         {/* Calendly link widget begin */}
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         {/* Calendly link widget end */}
-        
-        {/* Calendly badge widget begin */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{
-          __html: `window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/g-hansen17/30min', text: 'Schedule a call', color: '#0069ff', textColor: '#ffffff', branding: true }); }`
-        }} />
-        {/* Calendly badge widget end */}
       </head>
       <body className="font-sans">
         {/* Skip to content link for accessibility */}

@@ -31,7 +31,7 @@ export default function CalendlySection() {
               <div className="mb-8">
                 <p className="text-gray-600 max-w-2xl mx-auto">
                   We&apos;ll discuss your current workflow, identify time-wasters, 
-                  and create a personalized AI action plan—all in 45 minutes, completely free.
+                  and create a personalized AI action plan—all in a short consultation, completely free.
                 </p>
               </div>
               
@@ -63,7 +63,7 @@ export default function CalendlySection() {
               <div className="mb-8">
                 <p className="text-gray-600 max-w-2xl mx-auto">
                   We&apos;ll discuss your current workflow, identify time-wasters, 
-                  and create a personalized AI action plan—all in 45 minutes, completely free.
+                  and create a personalized AI action plan—all in a short consultation, completely free.
                 </p>
               </div>
               

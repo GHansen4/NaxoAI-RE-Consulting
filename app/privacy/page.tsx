@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
 
       <h2 className="text-xl font-semibold mt-10 mb-4">1. Introduction</h2>
       <p className="mb-6">
-        NaxoAI ("we," "our," or "us") respects your privacy and is committed to
+        NaxoAI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy and is committed to
         protecting the personal information you share with us. This Privacy Policy
         explains how we collect, use, and safeguard your information when you use
         our website and services.
@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
         .
       </p>
 
-      <h2 className="text-xl font-semibold mt-10 mb-4">7. Children's Privacy</h2>
+      <h2 className="text-xl font-semibold mt-10 mb-4">7. Children&apos;s Privacy</h2>
       <p className="mb-6">
         Our services are not directed to individuals under 18, and we do not
         knowingly collect personal information from children.
@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
       <h2 className="text-xl font-semibold mt-10 mb-4">8. Updates to This Policy</h2>
       <p className="mb-6">
         We may update this Privacy Policy from time to time. Changes will be posted
-        on this page with an updated "Effective Date."
+        on this page with an updated &quot;Effective Date.&quot;
       </p>
 
       <h2 className="text-xl font-semibold mt-10 mb-4">9. Contact Us</h2>

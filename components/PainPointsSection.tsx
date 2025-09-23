@@ -6,7 +6,7 @@ import AnimatedSection from './AnimatedSection'
 const painPoints = [
   {
     icon: ClockIcon,
-    title: "MLS descriptions taking 45+ minutes each.",
+    title: "MLS descriptions taking too long to write.",
     description: "Every listing becomes a writing marathon, pulling you away from actually selling homes."
   },
   {

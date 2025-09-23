@@ -3,23 +3,51 @@
 import React from 'react'
 import CalendlyButton from './CalendlyButton'
 import AnimatedSection from './AnimatedSection'
+import { ShieldStar } from '@/components/ui/Icons'
 
 export default function FinalCTASection() {
   return (
-    <section id="book" className="scroll-mt-28 md:scroll-mt-32 py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary-50 to-white">
+    <section id="book" className="scroll-mt-28 md:scroll-mt-32 py-14 bg-slate-50">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <AnimatedSection>
           <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl mb-6">
             Book your free consultation
           </h2>
-          <p className="text-xl text-slate-600 mb-4 max-w-2xl mx-auto leading-relaxed">
+          {/* Trust / Stat Strip */}
+          <div className="mb-8">
+            <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
+              <ShieldStar className="h-4 w-4 text-blue-600" aria-hidden="true" />
+              <span>Trusted by agents across Wake County</span>
+            </div>
+            
+            {/* Alternative stat options (commented) */}
+            {/* <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
+              <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+              <span>Trusted by agents in the Raleigh area</span>
+            </div> */}
+            
+            {/* <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
+              <svg className="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M3 3v18h18"/>
+                <path d="m19 9-5 5-4-4-3 3"/>
+              </svg>
+              <span>Hundreds of hours of busywork automated</span>
+            </div> */}
+            
+            {/* Optional testimonial placeholder (commented) */}
+            {/* <div className="mt-3 text-sm italic text-slate-500">
+              "Greg made AI feel simple—and the follow-ups run themselves." — Local agent
+            </div> */}
+          </div>
+          
+          <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Choose a time that works for you below.
           </p>
-          <p className="mt-2 text-sm text-gray-600 mb-8 max-w-2xl mx-auto">
-            Prefer a structured start? Book a 60-min <span className="font-medium">Paid Diagnostic</span> for $149 and get a 1-page action plan.
-          </p>
           
-          <CalendlyButton className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
+          <CalendlyButton className="inline-flex items-center justify-center bg-blue-600 text-white rounded-xl shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 px-8 py-4 text-lg font-medium transition-all duration-200 transform hover:-translate-y-0.5">
             Schedule your free consultation
           </CalendlyButton>
           

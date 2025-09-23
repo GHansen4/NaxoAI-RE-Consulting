@@ -81,7 +81,7 @@ export default function TermsOfServicePage() {
       <h2 className="text-xl font-semibold mt-10 mb-4">11. Changes to These Terms</h2>
       <p className="mb-6">
         We may update these Terms from time to time. The latest version will
-        always be posted on this page with an updated "Effective Date."
+        always be posted on this page with an updated &quot;Effective Date.&quot;
       </p>
 
       <h2 className="text-xl font-semibold mt-10 mb-4">12. Contact Us</h2>

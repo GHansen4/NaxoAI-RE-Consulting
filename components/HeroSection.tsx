@@ -33,31 +33,26 @@ export default function HeroSection() {
               
               {/* Sub-headline */}
               <p className="mt-6 text-lg leading-relaxed text-slate-600 max-w-2xl mx-auto md:mx-0 sm:text-xl">
-                AI consulting for real estate agents.
-              </p>
-              
-              {/* Value promise */}
-              <p className="mt-4 text-base leading-relaxed text-slate-600 max-w-2xl mx-auto md:mx-0 font-medium">
-                Walk away with a personalized AI action plan to save 5+ hours/week.
+                Free up time for clients, closings, and growth with a personalized AI action plan—done for you.
               </p>
               
               {/* Benefit chips */}
               <div className="mt-6 flex justify-center md:justify-start">
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-sm">
-                  No code • Local expertise • Fast setup
+                  Technical expertise • Local knowledge • Professional setup
                 </span>
               </div>
             </div>
             
-            {/* Primary CTA - pinned to bottom */}
-            <div className="mt-10">
-              <CalendlyButton className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
-                Schedule your free consultation
-              </CalendlyButton>
-              <p className="mt-2 text-xs text-slate-500">
-                Pick a time that works for you. No pressure.
-              </p>
-            </div>
+                    {/* Primary CTA - pinned to bottom */}
+                    <div className="mt-10">
+                      <CalendlyButton className="inline-flex items-center justify-center bg-blue-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 px-10 py-5 text-xl font-bold transition-all duration-200 transform hover:-translate-y-0.5">
+                        Schedule your free consultation
+                      </CalendlyButton>
+                      <p className="mt-3 text-sm text-slate-500">
+                        Pick a time that works for you. No pressure.
+                      </p>
+                    </div>
           </div>
 
           {/* Hero Image */}

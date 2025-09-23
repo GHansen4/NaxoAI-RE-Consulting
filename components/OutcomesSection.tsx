@@ -1,11 +1,7 @@
 'use client'
 
 import React from 'react'
-import { 
-  ClockIcon,
-  UserPlusIcon,
-  SparklesIcon
-} from '@heroicons/react/24/outline'
+import { IconChip, ClockSpark, BoltInbox, DocSparkle } from '@/components/ui/Icons'
 import CalendlyButton from './CalendlyButton'
 import AnimatedSection from './AnimatedSection'
 
@@ -19,29 +15,29 @@ interface OutcomeCard {
 
 const outcomeData: OutcomeCard[] = [
   {
-    icon: ClockIcon,
-    title: "Save 5+ hours/week",
-    subtitle: "Automate admin so you can stay in front of clients.",
-    proofChip: "~5+ hrs/week back",
+    icon: ClockSpark,
+    title: "Save significant time each week",
+    subtitle: "Automate admin so you can focus on clients.",
+    proofChip: "Significant time savings",
     bullets: [
       "MLS-ready listing descriptions in minutes",
       "Call notes → CRM summaries you can paste"
     ]
   },
   {
-    icon: UserPlusIcon,
+    icon: BoltInbox,
     title: "Never miss a hot lead",
-    subtitle: "Follow-ups go out on time; warm leads bubble up to you.",
+    subtitle: "Instant follow-ups and lead routing, even after hours.",
     proofChip: "+30–50% replies",
     bullets: [
       "Same-day follow-ups after open houses",
-      "Simple sequences for new inquiries"
+      "Professional sequences for new inquiries"
     ]
   },
   {
-    icon: SparklesIcon,
+    icon: DocSparkle,
     title: "Look professional, everywhere",
-    subtitle: "Polished copy and consistent tone across channels.",
+    subtitle: "Consistent, on-brand content across channels.",
     proofChip: "Launch in days",
     bullets: [
       "Listing captions & variations in one click",
@@ -52,34 +48,38 @@ const outcomeData: OutcomeCard[] = [
 
 export default function OutcomesSection() {
   return (
-    <section id="outcomes" className="scroll-mt-28 md:scroll-mt-32 py-7 sm:py-8 lg:py-10 bg-white">
+    <section id="outcomes" className="scroll-mt-28 md:scroll-mt-32 py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimatedSection className="text-center mb-6 sm:mb-8">
           <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
             Real results agents care about.
           </h2>
           <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Shorten the busywork and focus on clients. Here's what you'll notice first.
+            Shorten the busywork and focus on clients. Here&apos;s what you&apos;ll notice first.
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 mb-6 sm:mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-6 sm:mb-8">
           {outcomeData.map((outcome, index) => (
             <AnimatedSection key={index} delay={index * 100 + 200}>
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-5 hover:shadow-md transition-all duration-200 hover:-translate-y-1 h-full flex flex-col">
-                <div className="flex items-center justify-center w-12 h-12 bg-slate-50 rounded-xl mb-3">
-                  <outcome.icon className="w-6 h-6 text-slate-500" aria-hidden="true" />
-                </div>
+              <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 sm:p-6 hover:shadow-md transition-all duration-200 hover:-translate-y-1 h-full flex flex-col">
+                {index === 0 ? (
+                  <IconChip><ClockSpark className="h-5 w-5" /></IconChip>
+                ) : index === 1 ? (
+                  <IconChip><BoltInbox className="h-5 w-5" /></IconChip>
+                ) : (
+                  <IconChip><DocSparkle className="h-5 w-5" /></IconChip>
+                )}
                 
-                <h3 className="text-lg font-semibold text-slate-900 mb-1 sm:text-xl">
+                <h3 className="font-semibold text-slate-900 mb-3">
                   {outcome.title}
                 </h3>
                 
-                <span className="inline-flex px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-xs font-medium mt-1 mb-3 self-start">
+                <span className="inline-flex px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 border border-slate-200 text-xs font-medium mb-3 self-start">
                   {outcome.proofChip}
                 </span>
                 
-                <p className="text-slate-600 mb-3 text-sm leading-relaxed">
+                <p className="text-sm text-slate-600 leading-6 mb-3">
                   {outcome.subtitle}
                 </p>
                 
@@ -99,7 +99,7 @@ export default function OutcomesSection() {
         {/* Footer content */}
         <div className="text-center space-y-4">
           <p className="text-sm text-slate-600">
-            All with proven, no-code tools—we set them up for you.
+            All with proven, tools we set up for you.
           </p>
           
           <CalendlyButton className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">

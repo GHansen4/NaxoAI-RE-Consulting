@@ -25,9 +25,9 @@ interface PainSolutionCard {
 const painSolutionData: PainSolutionCard[] = [
   {
     icon: DocumentTextIcon,
-    pain: "MLS descriptions taking 45+ minutes each.",
-    solution: "AI drafts MLS-ready copy in ~2 minutes. You approve; we tune tone once.",
-    proofChip: "Save ~3 hrs/week",
+    pain: "MLS descriptions taking too long to write.",
+    solution: "AI drafts MLS-ready copy quickly. You approve; we tune tone once.",
+    proofChip: "Save significant time",
     bullets: ["SEO-aware language", "Style matched to your brand"],
     color: "blue"
   },
@@ -43,7 +43,7 @@ const painSolutionData: PainSolutionCard[] = [
     icon: UserPlusIcon,
     pain: "Following up with dozens of prospects one by one.",
     solution: "Lightweight sequences for hot/warm leads; you only write the first template.",
-    proofChip: "~1–2 hrs/day back",
+    proofChip: "Save daily time",
     bullets: ["Pause/resume per contact", "Works with your CRM"],
     color: "purple"
   },
@@ -51,14 +51,14 @@ const painSolutionData: PainSolutionCard[] = [
     icon: CameraIcon,
     pain: "Weekend time drained by marketing posts.",
     solution: "Instant listing captions + variations (IG/FB), scheduled in one go.",
-    proofChip: "10–15 min/post",
+    proofChip: "Quick posts",
     bullets: ["Hashtags auto-suggested", "Consistent tone"],
     color: "pink"
   },
   {
     icon: PuzzlePieceIcon,
     pain: "Too many apps; none easy to set up.",
-    solution: "We assemble a no-code stack that works together. You just use it.",
+    solution: "We assemble a technical stack that works together. You just use it.",
     proofChip: "Setup handled for you",
     bullets: ["Clear handoff", "No contracts"],
     color: "indigo"
@@ -219,7 +219,7 @@ export default function PainSolutionSection() {
   }
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimatedSection className="text-center mb-8 sm:mb-10">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
@@ -247,7 +247,7 @@ export default function PainSolutionSection() {
         {/* Footer content */}
         <div className="text-center space-y-6">
           <p className="text-sm text-gray-600">
-            All with proven, out-of-the-box tools—no coding required.
+            All with proven, enterprise-grade tools—technical setup handled.
           </p>
           
           <CalendlyButton className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">

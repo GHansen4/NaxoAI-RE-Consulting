@@ -9,7 +9,6 @@ import PricingSection from '@/components/PricingSection'
 import FAQSection from '@/components/FAQSection'
 import FinalCTASection from '@/components/FinalCTASection'
 import Footer from '@/components/Footer'
-import CalendlyBadgeController from '@/components/CalendlyBadgeController'
 
 /**
  * Main page component - simplified and clean
@@ -27,7 +26,6 @@ export default function Home() {
       <FAQSection />
       <FinalCTASection />
       <Footer />
-      <CalendlyBadgeController />
     </main>
   )
 }
