@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import CalendlyButton from './CalendlyButton'
 
@@ -37,7 +38,14 @@ export default function Navigation() {
       <nav className="relative z-10 flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-bold text-primary-600">NaxoAI</span>
+            <Image
+              src="/images/naxologocropped.jpg"
+              alt="NaxoAI Logo"
+              width={120}
+              height={40}
+              className="h-16 w-auto"
+              priority
+            />
           </Link>
         </div>
         
@@ -78,7 +86,13 @@ export default function Navigation() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
-                <span className="text-2xl font-bold text-primary-600">NaxoAI</span>
+                <Image
+                  src="/images/naxologocropped.jpg"
+                  alt="NaxoAI Logo"
+                  width={120}
+                  height={40}
+                  className="h-16 w-auto"
+                />
               </Link>
               <button
                 type="button"
