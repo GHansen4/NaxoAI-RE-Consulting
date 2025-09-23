@@ -39,7 +39,7 @@ export default function Navigation() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <Image
-              src="/images/naxologocropped.jpg"
+              src="/images/naxologo.jpg"
               alt="NaxoAI Logo"
               width={120}
               height={40}
@@ -87,7 +87,7 @@ export default function Navigation() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5">
                 <Image
-                  src="/images/naxologocropped.jpg"
+                  src="/images/naxologo.jpg"
                   alt="NaxoAI Logo"
                   width={120}
                   height={40}
