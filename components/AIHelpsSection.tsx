@@ -75,7 +75,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
       </div>
       
       {/* Content */}
-      <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
+      <h3 className="text-xl font-semibold text-primary-900 mb-3 leading-tight">
         {feature.title}
       </h3>
       <p className="text-gray-600 leading-relaxed">
@@ -96,7 +96,7 @@ export default function AIHelpsSection() {
           <div className="neutral-chip mb-4">
             <span>Professional AI solutions for real estate.</span>
           </div>
-          <h2 className="responsive-text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="responsive-text-2xl font-bold tracking-tight text-primary-900">
             Professional AI solutions for real estate.
           </h2>
           <p className="mt-2 sm:mt-3 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
@@ -112,7 +112,7 @@ export default function AIHelpsSection() {
 
         <div className="text-center mb-8">
           <p className="text-sm text-gray-600 mb-2">
-            <span className="font-medium text-gray-900">Example:</span> MLS copy drafted quickly instead of taking much longer.
+            <span className="font-medium text-primary-900">Example:</span> MLS copy drafted quickly instead of taking much longer.
           </p>
           <p className="text-xs text-gray-500">
             All with proven, enterprise-grade tools—technical setup handled.

@@ -10,7 +10,7 @@ export default function FinalCTASection() {
     <section id="book" className="scroll-mt-28 md:scroll-mt-32 py-14 bg-slate-50">
       <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
         <AnimatedSection>
-          <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl mb-6">
+          <h2 className="text-xl font-bold tracking-tight text-primary-900 sm:text-2xl lg:text-3xl mb-6">
             Book your free consultation
           </h2>
           {/* Trust / Stat Strip */}

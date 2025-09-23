@@ -52,7 +52,7 @@ export default function FAQSection() {
     <section id="faq" className="scroll-mt-28 md:scroll-mt-32 py-16 lg:py-20 bg-gray-50">
       <div className="mx-auto max-w-4xl container-padding">
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
+          <h2 className="text-xl font-bold tracking-tight text-primary-900 sm:text-2xl lg:text-3xl">
             Frequently Asked Questions
           </h2>
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">

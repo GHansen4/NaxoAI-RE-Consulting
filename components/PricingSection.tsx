@@ -61,7 +61,7 @@ export default function PricingSection() {
       <div className="mx-auto max-w-7xl container-padding">
         {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
-          <h2 id="pricing-heading" className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 id="pricing-heading" className="text-3xl font-semibold tracking-tight text-primary-900 sm:text-4xl">
             Simple, transparent pricing.
           </h2>
           <p className="mt-3 text-gray-600">
@@ -83,9 +83,9 @@ export default function PricingSection() {
                   {p.badge}
                 </span>
               )}
-              <h3 className="text-xl font-semibold text-gray-900">{p.name}</h3>
+              <h3 className="text-xl font-semibold text-primary-900">{p.name}</h3>
               <p className="mt-1 text-sm text-gray-600">{p.blurb}</p>
-              <p className="mt-4 text-2xl font-semibold text-gray-900">{p.price}</p>
+              <p className="mt-4 text-2xl font-semibold text-primary-900">{p.price}</p>
               <p className="mt-1 text-xs text-gray-600">
                 One extra closing per year easily covers your investment.
               </p>
@@ -106,7 +106,12 @@ export default function PricingSection() {
               <div className="mt-6">
                 <Link
                   href={p.cta.href}
-                  className="inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className={`inline-flex w-full items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition
+                    ${
+                      p.highlight
+                        ? "bg-blue-600 text-white hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        : "border border-blue-600 text-blue-600 bg-white hover:bg-blue-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    }`}
                 >
                   {p.cta.label}
                 </Link>

@@ -19,8 +19,8 @@ module.exports = {
           600: '#0044CC', // Primary Blue (Brand Anchor)
           700: '#003bb3',
           800: '#003299',
-          900: '#002980',
-          950: '#001a4d',
+          900: '#12395c', // Deep Navy for text (rgb: 18, 57, 92)
+          950: '#000a1a',
         },
         accent: {
           50: '#f0f6ff',

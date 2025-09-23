@@ -41,7 +41,7 @@ export default function PainPointsSection() {
     <section className="section-spacing bg-gray-50">
       <div className="mx-auto max-w-7xl container-padding">
         <AnimatedSection className="text-center mb-4 sm:mb-6">
-          <h2 className="responsive-text-2xl font-bold tracking-tight text-gray-900">
+          <h2 className="responsive-text-2xl font-bold tracking-tight text-primary-900">
             Does this sound familiar?
           </h2>
           <p className="mt-2 sm:mt-3 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
@@ -61,7 +61,7 @@ export default function PainPointsSection() {
               </div>
               
               {/* Content */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 leading-tight">
+              <h3 className="text-xl font-semibold text-primary-900 mb-3 leading-tight">
                 {painPoint.title}
               </h3>
               <p className="text-gray-600 leading-relaxed">

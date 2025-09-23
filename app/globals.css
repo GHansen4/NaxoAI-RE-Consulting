@@ -11,7 +11,7 @@
   }
   
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply bg-white text-primary-900 antialiased;
   }
   
   /* Improved focus styles for accessibility */
@@ -123,15 +123,15 @@ button:focus-visible {
   
   /* Professional typography hierarchy */
   h1, .h1 {
-    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900;
+    @apply text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-primary-900;
   }
 
   h2, .h2 {
-    @apply text-xl sm:text-2xl lg:text-3xl font-bold leading-tight text-slate-900;
+    @apply text-xl sm:text-2xl lg:text-3xl font-bold leading-tight text-primary-900;
   }
 
   h3, .h3 {
-    @apply text-lg sm:text-xl lg:text-2xl font-semibold leading-tight text-slate-900;
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold leading-tight text-primary-900;
   }
 
   .body-text {

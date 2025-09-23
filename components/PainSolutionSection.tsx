@@ -135,7 +135,7 @@ function PainSolutionCardComponent({ card, index, isOpen, onToggle, isMobile }: 
             <card.icon className={`w-5 h-5 ${colors.icon}`} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-sm font-semibold text-gray-900 leading-tight pr-2">
+            <h3 className="text-sm font-semibold text-primary-900 leading-tight pr-2">
               {card.pain}
             </h3>
           </div>
@@ -222,7 +222,7 @@ export default function PainSolutionSection() {
     <section className="py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimatedSection className="text-center mb-8 sm:mb-10">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl lg:text-5xl">
             Common agent headaches — and how we fix them.
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">

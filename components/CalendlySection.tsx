@@ -18,7 +18,7 @@ export default function CalendlySection() {
       <section id="calendly" className="section-spacing bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-5xl container-padding">
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl lg:text-5xl mb-6">
               Book Your Free Consultation
             </h2>
             <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
@@ -50,7 +50,7 @@ export default function CalendlySection() {
     <section id="calendly" className="section-spacing bg-gradient-to-br from-primary-50 to-white">
         <div className="mx-auto max-w-5xl container-padding">
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl mb-6">
+            <h2 className="text-3xl font-bold tracking-tight text-primary-900 sm:text-4xl lg:text-5xl mb-6">
               Book Your Free Consultation
             </h2>
             <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">

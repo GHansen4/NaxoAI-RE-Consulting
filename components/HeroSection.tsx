@@ -27,7 +27,7 @@ export default function HeroSection() {
             {/* Content wrapper */}
             <div className="flex-grow">
               {/* Main headline */}
-              <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-tight">
+              <h1 className="text-4xl font-bold tracking-tight text-primary-900 sm:text-5xl lg:text-6xl leading-tight">
                 Let AI handle the busywork—so you can focus on closing deals
               </h1>
               

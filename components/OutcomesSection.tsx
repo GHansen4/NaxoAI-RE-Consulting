@@ -51,7 +51,7 @@ export default function OutcomesSection() {
     <section id="outcomes" className="scroll-mt-28 md:scroll-mt-32 py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <AnimatedSection className="text-center mb-6 sm:mb-8">
-          <h2 className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl lg:text-3xl">
+          <h2 className="text-xl font-bold tracking-tight text-primary-900 sm:text-2xl lg:text-3xl">
             Turn AI into your unfair advantage.
           </h2>
           <p className="mt-3 text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -71,7 +71,7 @@ export default function OutcomesSection() {
                   <IconChipValueProp><BadgeStar className="h-7 w-7 md:h-8 md:w-8" /></IconChipValueProp>
                 )}
                 
-                <h3 className="font-semibold text-slate-900 mb-3">
+                <h3 className="font-semibold text-primary-900 mb-3">
                   {outcome.title}
                 </h3>
                 

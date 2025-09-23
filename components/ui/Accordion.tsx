@@ -21,7 +21,7 @@ function AccordionItem({ question, answer, isOpen, onToggle, id }: AccordionItem
         aria-controls={`accordion-content-${id}`}
         id={`accordion-trigger-${id}`}
       >
-        <h3 className="text-lg font-semibold text-slate-900 pr-4">
+        <h3 className="text-lg font-semibold text-primary-900 pr-4">
           {question}
         </h3>
         <div className="flex-shrink-0">

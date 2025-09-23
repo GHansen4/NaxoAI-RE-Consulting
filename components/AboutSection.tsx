@@ -13,7 +13,7 @@ export default function AboutSection() {
           <div className="neutral-chip mb-4">
             <span>Local expertise, practical AI solutions.</span>
           </div>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-primary-900">
             Hi, I&apos;m Greg.
           </h2>
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -25,7 +25,7 @@ export default function AboutSection() {
           <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Profile Image */}
-              <div className="relative bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center p-6 lg:p-8 min-h-[320px] lg:min-h-[400px]">
+              <div className="relative bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-6 lg:p-8 min-h-[320px] lg:min-h-[400px]">
                 <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg overflow-hidden">
                   <OptimizedImage
                     src="/images/aboutMePic.jpg"
