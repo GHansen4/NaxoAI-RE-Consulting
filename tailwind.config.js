@@ -8,18 +8,45 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // 3-shade blue system
         primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb', // Brand blue for links
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a', // Action navy for buttons
-          950: '#172554',
+          50: '#f0f4ff',
+          100: '#e0e9ff',
+          200: '#c7d6ff',
+          300: '#a5b8ff',
+          400: '#8194ff',
+          500: '#6379ff',
+          600: '#0044CC', // Primary Blue (Brand Anchor)
+          700: '#003bb3',
+          800: '#003299',
+          900: '#002980',
+          950: '#001a4d',
+        },
+        accent: {
+          50: '#f0f6ff',
+          100: '#e0ecff',
+          200: '#c7dbff',
+          300: '#a5c2ff',
+          400: '#819eff',
+          500: '#637cff',
+          600: '#1e40af', // Accent/CTA Blue - darkened
+          700: '#1e3a8a',
+          800: '#1e3a8a',
+          900: '#172554',
+          950: '#0f172a',
+        },
+        muted: {
+          50: '#f8faff',
+          100: '#f1f4ff',
+          200: '#e6edff',
+          300: '#d1ddff',
+          400: '#b4c7ff',
+          500: '#94aaff',
+          600: '#5A8DEE', // Muted/Secondary Blue
+          700: '#4a73d1',
+          800: '#3e5fb8',
+          900: '#364f9c',
+          950: '#233067',
         },
         gray: {
           50: '#f8fafc',
@@ -34,11 +61,6 @@ module.exports = {
           900: '#0f172a',
           950: '#020617',
         },
-        accent: {
-          blue: '#0ea5e9',
-          purple: '#8b5cf6',
-          teal: '#14b8a6',
-        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

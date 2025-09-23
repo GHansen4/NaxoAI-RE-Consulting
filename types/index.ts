@@ -24,7 +24,6 @@ export interface Feature {
   icon: IconComponent
   title: string
   description: string
-  colorKey: ColorVariant
 }
 
 export interface FAQItem {

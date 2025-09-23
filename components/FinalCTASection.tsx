@@ -16,7 +16,7 @@ export default function FinalCTASection() {
           {/* Trust / Stat Strip */}
           <div className="mb-8">
             <div className="flex items-center justify-center gap-2 text-sm text-slate-600">
-              <ShieldStar className="h-4 w-4 text-blue-600" aria-hidden="true" />
+              <ShieldStar className="h-4 w-4 text-primary-600" aria-hidden="true" />
               <span>Trusted by agents across Wake County</span>
             </div>
             
@@ -47,7 +47,7 @@ export default function FinalCTASection() {
             Choose a time that works for you below.
           </p>
           
-          <CalendlyButton className="inline-flex items-center justify-center bg-blue-600 text-white rounded-xl shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 px-8 py-4 text-lg font-medium transition-all duration-200 transform hover:-translate-y-0.5">
+                  <CalendlyButton className="inline-flex items-center justify-center bg-accent-600 text-white rounded-xl shadow-sm hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 px-8 py-4 text-lg font-medium transition-all duration-200 transform hover:-translate-y-0.5">
             Schedule your free consultation
           </CalendlyButton>
           

@@ -2,7 +2,21 @@ import React from 'react'
 
 // Icon wrapper component for consistent styling
 export const IconChip = ({ children, className }: { children: React.ReactNode; className?: string }) => (
-  <div className={`h-10 w-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center ${className || ""}`} aria-hidden="true">
+  <div className={`h-10 w-10 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center ${className || ""}`} aria-hidden="true">
+    {children}
+  </div>
+)
+
+// Dark chip wrapper for high contrast
+export const IconChipDark = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  <div className={`h-10 w-10 rounded-lg bg-accent-600 text-white flex items-center justify-center ${className || ""}`} aria-hidden="true">
+    {children}
+  </div>
+)
+
+// Value prop icon wrapper with light circular background
+export const IconChipValueProp = ({ children, className }: { children: React.ReactNode; className?: string }) => (
+  <div className={`h-10 w-10 rounded-full bg-gray-100 text-primary-600 flex items-center justify-center ${className || ""}`} aria-hidden="true">
     {children}
   </div>
 )
@@ -58,16 +72,6 @@ export const GearCheck = ({ className }: { className?: string }) => (
   </svg>
 )
 
-export const GraphUp = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M3 3v18h18"/>
-    <path d="m19 9-5 5-4-4-3 3"/>
-    <circle cx="6" cy="16" r="1"/>
-    <circle cx="10" cy="12" r="1"/>
-    <circle cx="14" cy="8" r="1"/>
-    <circle cx="18" cy="6" r="1"/>
-  </svg>
-)
 
 export const ShieldCheck = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -98,5 +102,47 @@ export const ShieldStar = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
     <path d="M12 8l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z"/>
+  </svg>
+)
+
+// High-contrast value prop icons
+export const Clock = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="10"/>
+    <polyline points="12,6 12,12 16,14"/>
+  </svg>
+)
+
+export const NotificationBell = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2C8.134 2 5 5.134 5 9v3.586l-1.707 1.707A1 1 0 0 0 4 16v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1a1 1 0 0 0-.293-.707L19 12.586V9c0-3.866-3.134-7-7-7z"/>
+    <path d="M10 18a2 2 0 1 0 4 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+  </svg>
+)
+
+export const BadgeStar = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+  </svg>
+)
+
+// How it works section icons
+export const MagnifyingGlass = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="6" />
+    <path d="M16 16l4 4" />
+  </svg>
+)
+
+export const Wrench = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M14 7a4 4 0 0 1-5.66 5.66L4 17v3h3l4.34-4.34A4 4 0 0 1 14 7z" />
+  </svg>
+)
+
+export const GraphUp = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M3 20h18" />
+    <path d="M6 16l4-4 3 3 5-6" />
   </svg>
 )

@@ -18,11 +18,16 @@ export const BUSINESS_INFO = {
 
 // Design system constants
 export const DESIGN_SYSTEM = {
-  // Color variants
+  // 3-shade blue system
   colors: {
-    primary: '#2563eb',
+    // Primary Blue (Brand Anchor) - for logo, main icons, headings highlights
+    primary: '#0044CC',
+    // Accent/CTA Blue - for primary buttons and call-to-actions
+    accent: '#0066FF', 
+    // Muted/Secondary Blue - for links, secondary icons, subtle highlights
+    muted: '#5A8DEE',
+    // Supporting colors
     secondary: '#64748b',
-    accent: '#0ea5e9',
     success: '#10b981',
     warning: '#f59e0b',
     error: '#ef4444',

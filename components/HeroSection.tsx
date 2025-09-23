@@ -46,7 +46,7 @@ export default function HeroSection() {
             
                     {/* Primary CTA - pinned to bottom */}
                     <div className="mt-10">
-                      <CalendlyButton className="inline-flex items-center justify-center bg-blue-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 px-10 py-5 text-xl font-bold transition-all duration-200 transform hover:-translate-y-0.5">
+                      <CalendlyButton className="inline-flex items-center justify-center bg-accent-600 text-white rounded-xl shadow-lg hover:shadow-xl hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 px-10 py-5 text-xl font-bold transition-all duration-200 transform hover:-translate-y-0.5">
                         Schedule your free consultation
                       </CalendlyButton>
                       <p className="mt-3 text-sm text-slate-500">
@@ -70,8 +70,8 @@ export default function HeroSection() {
                 blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
               
-              {/* Subtle brand overlay */}
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-blue-500/5 to-slate-900/5 pointer-events-none" />
+                      {/* Subtle brand overlay */}
+                      <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary-500/5 to-slate-900/5 pointer-events-none" />
             </div>
           </div>
           

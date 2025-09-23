@@ -7,96 +7,42 @@ import {
   UserPlusIcon, 
   CameraIcon, 
   ClipboardDocumentListIcon, 
-  FolderOpenIcon,
-  SparklesIcon
+  FolderOpenIcon
 } from '@heroicons/react/24/outline'
 import ShowMore from './ui/ShowMore'
 import CalendlyButton from './CalendlyButton'
-
-// Simplified and type-safe feature data structure
-interface Feature {
-  icon: React.ComponentType<{ className?: string }>
-  title: string
-  description: string
-  colorKey: keyof typeof COLOR_STYLES
-}
-
-// Centralized color styles - no dynamic class names
-const COLOR_STYLES = {
-  blue: {
-    bg: 'bg-blue-50',
-    hover: 'group-hover:bg-blue-100',
-    icon: 'text-blue-600',
-    gradient: 'group-hover:from-blue-50/20 group-hover:to-blue-100/20'
-  },
-  green: {
-    bg: 'bg-green-50',
-    hover: 'group-hover:bg-green-100', 
-    icon: 'text-green-600',
-    gradient: 'group-hover:from-green-50/20 group-hover:to-green-100/20'
-  },
-  purple: {
-    bg: 'bg-purple-50',
-    hover: 'group-hover:bg-purple-100',
-    icon: 'text-purple-600', 
-    gradient: 'group-hover:from-purple-50/20 group-hover:to-purple-100/20'
-  },
-  pink: {
-    bg: 'bg-pink-50',
-    hover: 'group-hover:bg-pink-100',
-    icon: 'text-pink-600',
-    gradient: 'group-hover:from-pink-50/20 group-hover:to-pink-100/20'
-  },
-  indigo: {
-    bg: 'bg-indigo-50',
-    hover: 'group-hover:bg-indigo-100',
-    icon: 'text-indigo-600',
-    gradient: 'group-hover:from-indigo-50/20 group-hover:to-indigo-100/20'
-  },
-  teal: {
-    bg: 'bg-teal-50',
-    hover: 'group-hover:bg-teal-100',
-    icon: 'text-teal-600',
-    gradient: 'group-hover:from-teal-50/20 group-hover:to-teal-100/20'
-  }
-} as const
+import { Feature } from '@/types'
 
 const CORE_FEATURES: Feature[] = [
   {
     icon: DocumentTextIcon,
     title: "MLS-ready listing descriptions — drafted in seconds.",
-    description: "Turn property details into compelling, SEO-optimized descriptions that highlight key selling points and attract qualified buyers.",
-    colorKey: "blue"
+    description: "Turn property details into compelling, SEO-optimized descriptions that highlight key selling points and attract qualified buyers."
   },
   {
     icon: ChatBubbleLeftRightIcon,
     title: "Website chatbot — answers buyer & seller FAQs 24/7.",
-    description: "Capture leads around the clock with an AI assistant that provides instant responses about listings, neighborhoods, and processes.",
-    colorKey: "green"
+    description: "Capture leads around the clock with an AI assistant that provides instant responses about listings, neighborhoods, and processes."
   },
   {
     icon: UserPlusIcon,
     title: "Open-house follow-ups — automatic, no leads missed.",
-    description: "Send personalized follow-up messages to every visitor within hours, keeping your listings top-of-mind while leads are hot.",
-    colorKey: "purple"
+    description: "Send personalized follow-up messages to every visitor within hours, keeping your listings top-of-mind while leads are hot."
   },
   {
     icon: CameraIcon,
     title: "Instagram captions — for new listings, instantly.",
-    description: "Generate engaging social media content with trending hashtags and compelling copy that drives engagement and inquiries.",
-    colorKey: "pink"
+    description: "Generate engaging social media content with trending hashtags and compelling copy that drives engagement and inquiries."
   },
   {
     icon: ClipboardDocumentListIcon,
     title: "Call notes → CRM summaries — ready to paste.",
-    description: "Automatically extract key points, preferences, and action items from calls and meetings to stay organized and responsive.",
-    colorKey: "indigo"
+    description: "Automatically extract key points, preferences, and action items from calls and meetings to stay organized and responsive."
   },
   {
     icon: FolderOpenIcon,
     title: "Search contracts & docs — no more inbox hunting.",
-    description: "AI-powered document management that finds any file, contract detail, or client note in seconds with natural language search.",
-    colorKey: "teal"
+    description: "AI-powered document management that finds any file, contract detail, or client note in seconds with natural language search."
   }
 ]
 
@@ -104,32 +50,28 @@ const ADDITIONAL_FEATURES: Feature[] = [
   {
     icon: DocumentTextIcon,
     title: "Create market analysis reports.",
-    description: "Quickly generate comprehensive market analysis reports to inform clients and guide pricing strategies.",
-    colorKey: "blue"
+    description: "Quickly generate comprehensive market analysis reports to inform clients and guide pricing strategies."
   },
   {
     icon: UserPlusIcon,
     title: "Auto-respond to Zillow inquiries.",
-    description: "Never miss a lead with automated responses that capture contact information and schedule viewings.",
-    colorKey: "green"
+    description: "Never miss a lead with automated responses that capture contact information and schedule viewings."
   },
   {
     icon: CameraIcon,
     title: "Generate virtual tour scripts.",
-    description: "Create engaging scripts for virtual property tours that highlight key features and benefits.",
-    colorKey: "purple"
+    description: "Create engaging scripts for virtual property tours that highlight key features and benefits."
   }
 ]
 
 function FeatureCard({ feature }: { feature: Feature }) {
   const Icon = feature.icon
-  const styles = COLOR_STYLES[feature.colorKey]
   
   return (
-    <div className="group relative bg-white rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gray-200 hover-lift">
+    <div className="group relative bg-white rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-gray-200">
       {/* Icon */}
-      <div className={`flex items-center justify-center w-12 h-12 ${styles.bg} ${styles.hover} rounded-xl mb-6 transition-colors duration-300`}>
-        <Icon className={`w-6 h-6 ${styles.icon}`} />
+      <div className="flex items-center justify-center w-12 h-12 bg-primary-50 group-hover:bg-primary-100 rounded-xl mb-6 transition-colors duration-300">
+        <Icon className="w-6 h-6 text-primary-600" />
       </div>
       
       {/* Content */}
@@ -141,7 +83,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
       </p>
       
       {/* Hover effect */}
-      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-transparent ${styles.gradient} transition-all duration-300 pointer-events-none`} />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-50/0 to-primary-50/0 group-hover:from-primary-50/20 group-hover:to-primary-100/20 transition-all duration-300 pointer-events-none" />
     </div>
   )
 }
@@ -151,54 +93,24 @@ export default function AIHelpsSection() {
     <section className="section-spacing bg-white">
       <div className="mx-auto max-w-7xl container-padding">
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center rounded-full bg-primary-50 px-4 py-2 text-sm font-medium text-primary-700 ring-1 ring-inset ring-primary-700/10 mb-6">
-            <SparklesIcon className="w-4 h-4 mr-2" />
-            <span>The Solution</span>
+          <div className="neutral-chip mb-4">
+            <span>Professional AI solutions for real estate.</span>
           </div>
-          
           <h2 className="responsive-text-2xl font-bold tracking-tight text-gray-900">
             Professional AI solutions for real estate.
           </h2>
-          <p className="mt-3 sm:mt-4 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
-            Streamline your workflow, enhance client experience, and close more deals with tailored AI solutions.
+          <p className="mt-2 sm:mt-3 responsive-text-lg text-gray-600 max-w-2xl mx-auto">
+            Stop spending hours on repetitive tasks. Let AI handle the busywork while you focus on what matters most: building relationships and closing deals.
           </p>
         </div>
         
-        {/* Core Features - Always Visible */}
-        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-8">
           {CORE_FEATURES.map((feature, index) => (
-            <FeatureCard key={`core-${index}`} feature={feature} />
+            <FeatureCard key={index} feature={feature} />
           ))}
         </div>
 
-        {/* Additional Features - Expandable */}
-        <div className="mt-8 text-center">
-          <ShowMore 
-            trigger="See more AI use cases" 
-            className="text-center"
-            triggerClassName="text-lg"
-          >
-            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mt-6">
-              {ADDITIONAL_FEATURES.map((feature, index) => (
-                <FeatureCard key={`additional-${index}`} feature={feature} />
-              ))}
-            </div>
-            
-            <div className="mt-6 p-4 bg-gray-50 rounded-xl">
-              <h4 className="font-semibold text-gray-900 mb-2">Plus many more possibilities:</h4>
-              <ul className="text-gray-600 text-sm space-y-1">
-                <li>• Draft email newsletters</li>
-                <li>• Analyze competitor listings</li>
-                <li>• Create custom property brochures</li>
-                <li>• Generate client testimonial requests</li>
-                <li>• Automate social media scheduling</li>
-              </ul>
-            </div>
-          </ShowMore>
-        </div>
-        
-        {/* Proof point and footnote */}
-        <div className="text-center mt-8">
+        <div className="text-center mb-8">
           <p className="text-sm text-gray-600 mb-2">
             <span className="font-medium text-gray-900">Example:</span> MLS copy drafted quickly instead of taking much longer.
           </p>
@@ -207,11 +119,25 @@ export default function AIHelpsSection() {
           </p>
         </div>
         
-        {/* CTA */}
+        <ShowMore 
+          trigger="See more capabilities" 
+          className="text-center"
+          triggerClassName="inline-flex items-center px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-colors duration-200"
+        >
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+            {ADDITIONAL_FEATURES.map((feature, index) => (
+              <FeatureCard key={index} feature={feature} />
+            ))}
+          </div>
+        </ShowMore>
+        
         <div className="text-center mt-12">
           <CalendlyButton className="btn-primary text-lg px-8 py-4 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200">
-            Get Your Free AI Consultation
+            Get your free AI consultation
           </CalendlyButton>
+          <p className="text-sm text-gray-500 mt-4">
+            Prefer email? <a href="mailto:contact@naxoai.com" className="text-primary-600 hover:text-primary-700 transition-colors">contact@naxoai.com</a>
+          </p>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { IconChip, ClockSpark, BoltInbox, DocSparkle } from '@/components/ui/Icons'
+import { IconChipValueProp, Clock, NotificationBell, BadgeStar } from '@/components/ui/Icons'
 import CalendlyButton from './CalendlyButton'
 import AnimatedSection from './AnimatedSection'
 
@@ -15,7 +15,7 @@ interface OutcomeCard {
 
 const outcomeData: OutcomeCard[] = [
   {
-    icon: ClockSpark,
+    icon: Clock,
     title: "Save significant time each week",
     subtitle: "Automate admin so you can focus on clients.",
     proofChip: "Significant time savings",
@@ -25,7 +25,7 @@ const outcomeData: OutcomeCard[] = [
     ]
   },
   {
-    icon: BoltInbox,
+    icon: NotificationBell,
     title: "Never miss a hot lead",
     subtitle: "Instant follow-ups and lead routing, even after hours.",
     proofChip: "+30–50% replies",
@@ -35,7 +35,7 @@ const outcomeData: OutcomeCard[] = [
     ]
   },
   {
-    icon: DocSparkle,
+    icon: BadgeStar,
     title: "Look professional, everywhere",
     subtitle: "Consistent, on-brand content across channels.",
     proofChip: "Launch in days",
@@ -64,11 +64,11 @@ export default function OutcomesSection() {
             <AnimatedSection key={index} delay={index * 100 + 200}>
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5 sm:p-6 hover:shadow-md transition-all duration-200 hover:-translate-y-1 h-full flex flex-col">
                 {index === 0 ? (
-                  <IconChip><ClockSpark className="h-5 w-5" /></IconChip>
+                  <IconChipValueProp><Clock className="h-7 w-7 md:h-8 md:w-8" /></IconChipValueProp>
                 ) : index === 1 ? (
-                  <IconChip><BoltInbox className="h-5 w-5" /></IconChip>
+                  <IconChipValueProp><NotificationBell className="h-7 w-7 md:h-8 md:w-8" /></IconChipValueProp>
                 ) : (
-                  <IconChip><DocSparkle className="h-5 w-5" /></IconChip>
+                  <IconChipValueProp><BadgeStar className="h-7 w-7 md:h-8 md:w-8" /></IconChipValueProp>
                 )}
                 
                 <h3 className="font-semibold text-slate-900 mb-3">

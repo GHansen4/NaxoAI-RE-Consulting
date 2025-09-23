@@ -16,7 +16,9 @@
   
   /* Improved focus styles for accessibility */
   *:focus {
-    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    @apply outline-none;
+    box-shadow: 0 0 0 2px #0044CC;
+    outline-offset: 2px;
   }
   
   /* Skip to content link for accessibility */
@@ -27,7 +29,7 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-900 hover:bg-primary-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px];
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-accent-600 hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-400 transition-all duration-200 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px];
   }
   
   .btn-secondary {
@@ -80,13 +82,13 @@ button:focus-visible {
 }
 
 .btn-primary:focus-visible {
-  ring: 2px solid #60a5fa;
-  ring-offset: 2px;
+  box-shadow: 0 0 0 2px #60a5fa;
+  outline-offset: 2px;
 }
 
 .btn-secondary:focus-visible {
-  ring: 2px solid #60a5fa;
-  ring-offset: 2px;
+  box-shadow: 0 0 0 2px #60a5fa;
+  outline-offset: 2px;
 }
   
   /* Reduce motion for users who prefer it */

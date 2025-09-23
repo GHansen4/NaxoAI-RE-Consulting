@@ -38,15 +38,15 @@ export default function PricingSection() {
             {/* 2. Key Benefits */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
-                <IconChip><DocCheck className="h-5 w-5" /></IconChip>
+                <IconChip><DocCheck className="h-6 w-6" /></IconChip>
                 <span className="text-gray-700">Actionable AI plan customized to your business</span>
               </div>
               <div className="flex items-center space-x-3">
-                <IconChip><WrenchKit className="h-5 w-5" /></IconChip>
+                <IconChip><WrenchKit className="h-6 w-6" /></IconChip>
                 <span className="text-gray-700">Hands-on setup & support</span>
               </div>
               <div className="flex items-center space-x-3">
-                <IconChip><ShieldCheck className="h-5 w-5" /></IconChip>
+                <IconChip><ShieldCheck className="h-6 w-6" /></IconChip>
                 <span className="text-gray-700">No contracts, no hidden fees</span>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function PricingSection() {
 
             {/* CTA Button */}
             <div className="text-center">
-              <CalendlyButton className="inline-flex items-center justify-center bg-blue-600 text-white rounded-xl shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 px-6 py-3 text-sm font-medium transition-colors duration-200">
+                    <CalendlyButton className="inline-flex items-center justify-center bg-accent-600 text-white rounded-xl shadow-sm hover:bg-accent-700 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2 px-6 py-3 text-sm font-medium transition-colors duration-200">
                 Schedule your free consultation
               </CalendlyButton>
             </div>
