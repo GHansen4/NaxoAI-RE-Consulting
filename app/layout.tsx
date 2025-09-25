@@ -90,9 +90,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Preload hero image for better LCP */}
         <link
           rel="preload"
-          href="/images/NaxoHeroImage.png"
+          href="/images/NaxoHeroImage.jpg"
           as="image"
-          type="image/png"
+          type="image/jpeg"
           fetchPriority="high"
         />
         <link

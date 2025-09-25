@@ -59,7 +59,7 @@ export default function HeroSection() {
           <div className="mt-12 md:mt-0 flex items-center justify-center md:justify-start md:h-full">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/NaxoHeroImage.png"
+                src="/images/NaxoHeroImage.jpg"
                 alt="Real estate professional using AI automation tools and analytics dashboard to streamline workflows and save time"
                 width={600}
                 height={400}
